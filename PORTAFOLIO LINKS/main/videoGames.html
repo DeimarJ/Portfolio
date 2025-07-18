@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="videogames.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="backgrounds">
+        <video autoplay loop muted id="videogamesVideo">
+            <source src="Backgrounds/Prueba.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <label for="btn-sections">SECCIONES</label>
+        <a href="mainAboutMe.html">SOBRE MÍ</a>
+        <label for="btn-contact">CONTACTO</label>
+    </header>
+    <input type="checkbox" name="" id="btn-sections">
+
+    <div class="menuContainer">
+        <label for="btn-sections" class="labelContainer">
+            <div class="touch"></div>
+        </label>
+        <div class="menu">
+            <h2>ELIGE UNA SECCIÓN</h2>
+            <nav>
+                <a href="videoGames.html">VIDEOJUEGOS</a>
+                <a href="digitalDesign.html">DISEÑO DÍGITAL</a>
+                <a href="">MODELOS 3D</a>
+            </nav>
+
+
+            <label for="btn-contact">CONTACTO</label>
+        </div>
+    </div>
+
+    <input type="checkbox" name="" id="btn-contact">
+    <div class="contactContainer">
+        <div class="contact">
+            <h1>CONTÁCTAME POR UN VIDEOJUEGO</h1>
+
+            <div class="dataContainer">
+                <div class="nameContainer">
+                    <input type="text" placeholder="NOMBRE" class="name">
+                    <input type="text" placeholder="APELLIDO" class="lastname">
+                </div>
+
+                <div class="emailContainer">
+                    <input type="email" placeholder="example@e-mail.com" class="email">
+                </div>
+
+                <div class="descriptionContainer">
+                    <input type="text" placeholder="DESCRIPCIÓN" class="description">
+                </div>
+
+                <div class="buttonsContainer">
+                    <label for="btn-contact" class="cancel">Cancelar</label>
+                    <label for="btn-contact" class="send">Enviar</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="imgTest">  </div>
+
+
+    
+    <div class="container">
+        <div class="effect"></div>
+
+        <div class="letters">
+
+            <div data-aos="fade-left"
+                 data-aos-easing="linear"
+                 data-aos-duration="1500"
+                class="imageDescription">
+                Origins es un videojuego de acción, aventura y fantasía en primera y tercera persona ambientado en escenarios
+                ficticios y futuristas en el espacio, donde nuestros protagonistas deben luchar para sortear obstáculos y cumplir
+                su misión. Los personajes cuentan con armas de última generación y al matar enemigos pueden recoger armas o recoger munición.   
+            </div>
+            <div data-aos="fade-right"
+                 data-aos-easing="linear"
+                 data-aos-duration="1500"
+                    class="imageTitle">
+                <h2>ORIGINS</h2>
+                <h4>GÉNERO: ACCIÓN, AVENTURA, SCFI, FANTASÍA</h4>
+                <h4>FECHA: EN PROCESO</h4>
+            </div>
+            <div  class="imageContact">
+                <label for="btn-contact">
+                    CONCTACTAR POR UN VIDEOJUEGO
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

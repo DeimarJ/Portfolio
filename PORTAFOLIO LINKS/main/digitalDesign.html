@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="digitalDesign.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="backgrounds">
+    <video autoplay loop muted id="videogamesVideo">
+      <source src="Backgrounds/Prueba.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="swiper mySwiper">
+
+    <div data-aos="fade-down" class="title">
+      <h1>ELIGE UN DISEÑO</h1>
+    </div>
+
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="swiper-back" data-aos="fade-up">
+            <img src="img/Zed Fan Art - Constructivismo Ruso.png" alt="" width="100%" height="100%">
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div>
+            <div class="product-txt" data-aos="fade-up">
+              <span>ZED FAN-ART</span>
+            </div>
+          <a href="zedImage.html" class="btn-1">Detalles</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="swiper-back" data-aos="fade-up">
+            <img src="img/Render 1.jpg" alt="" width="100%" height="100%">
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div>
+            <div class="product-txt" data-aos="fade-up">
+              <span>RENDER</span>
+            </div>
+          <a href="renderImage.html" class="btn-1">Detalles</a>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="swiper-back" data-aos="fade-up">
+            <img src="img/Matte Blade Runner.jpg" alt="" width="100%" height="100%">
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </div>
+            <div class="product-txt" data-aos="fade-up">
+              <span>ZED FAN-ART</span>
+            </div>
+          <a href="bladeRunnerImage.html" class="btn-1">Detalles</a>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="digitalDesign.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

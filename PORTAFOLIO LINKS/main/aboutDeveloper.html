@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutDeveloper.css">
+    <title>SOBRE MI COMO DESARROLLADOR</title>
+</head>
+
+<body>
+
+    <div class="backgrounds">
+        <video autoplay loop muted id="videogamesVideo">
+            <source src="Backgrounds/Prueba.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <label for="btn-sections">SECCIONES</label>
+        <a href="mainAboutMe.html">SOBRE MÍ</a>
+        <label for="btn-contact">CONTACTO</label>
+    </header>
+    <input type="checkbox" name="" id="btn-sections">
+
+    <div class="menuContainer">
+        <label for="btn-sections" class="labelContainer">
+            <div class="touch"></div>
+        </label>
+        <div class="menu">
+            <h2>ELIGE UNA SECCIÓN</h2>
+            <nav>
+                <a href="videoGames.html">VIDEOJUEGOS</a>
+                <a href="digitalDesign.html">DISEÑO DÍGITAL</a>
+                <a href="models3d.html">MODELOS 3D</a>
+            </nav>
+
+
+            <label for="btn-contact">CONTACTO</label>
+        </div>
+    </div>
+
+    <input type="checkbox" name="" id="btn-contact">
+    <div class="contactContainer">
+        <div class="contact">
+            <h1>CONTÁCTAME POR UN VIDEOJUEGO</h1>
+
+            <div class="dataContainer">
+                <div class="nameContainer">
+                    <input type="text" placeholder="NOMBRE" class="name">
+                    <input type="text" placeholder="APELLIDO" class="lastname">
+                </div>
+
+                <div class="emailContainer">
+                    <input type="email" placeholder="example@e-mail.com" class="email">
+                </div>
+
+                <div class="descriptionContainer">
+                    <input type="text" placeholder="DESCRIPCIÓN" class="description">
+                </div>
+
+                <div class="buttonsContainer">
+                    <label for="btn-contact" class="cancel">Cancelar</label>
+                    <label for="btn-contact" class="send">Enviar</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="infoContainer" data-aos="fade-right">
+        <div class="profileContainer">
+            <img src="profilePhoto/photoCut.png" alt="" width="40%" height="50%">
+            <div class="title">
+                <h1>¿QUIÉN ES TheDeiJ?</h1>
+            </div>
+        </div>
+
+
+
+        <div class="infoDescription" data-aos="fade-right">
+            <h1>SOBRE MÍ COMO DESARROLLADOR DE VIDEOJUEGOS</h1>
+            TheDeiJ es un desarrollador de videojuegos y aplicaciones junior con una sólida base en el uso de motores
+            de juego como Unity y Unreal Engine. Tengo una pasión por la creación de experiencias interactivas y
+            envolventes, he trabajado en diversos proyectos que demuestran mi habilidad para transformar ideas en
+            realidades virtuales. <br><br>
+
+            En Unity, he desarrollado juegos y aplicaciones que destacan por su jugabilidad fluida y me han servido en
+            mi proceso de aprendizaje. Mi conocimiento en scripting con C# me permite implementar mecánicas de juego
+            cada vez más complejas y optimizar el rendimiento de mis aplicaciones.<br><br>
+
+            En Unreal Engine, me he aventurado y he aprovechado el poder de Blueprints y C++ para crear entornos realistas y
+            dinámicos. Además, Mi enfoque en la resolución de y mi deseoconstante de aprender nuevas técnicas y tecnologías
+            aseguran que siempre esté a la vanguardia en el desarrollo de videojuegos y aplicaciones.<br>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>

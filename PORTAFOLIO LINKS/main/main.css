@@ -1,0 +1,243 @@
+                                    /* ====PC==== */
+
+/* Body */
+.html, body{
+    background-color: black;
+    color: white;
+    width: 99vw;
+    height: 99vh;
+    overflow: hidden;
+    font-family: "Orbitron";
+}
+
+/* Container 1 */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#one{
+    z-index: 1;
+}
+
+/* Holde Button */
+.holder{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 1) 100%);
+    cursor: pointer;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+}
+.holder::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 4s linear;
+}
+.holder.holding::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Press */
+.pulse{
+    position: absolute;
+    bottom: 25%;
+}
+
+
+/* Container 2 */
+#two{
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#two.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Main Title */
+.mainTitle{
+    transform-origin: center;
+    font-size: 48px;
+    margin-top: 10%;
+}
+
+/* Content Container */
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Main About Me */
+#mainAboutMe{
+    transform-origin: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+#mainAboutMe:hover{
+    border-bottom: 5px solid white;
+}
+
+
+#two .content a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Main My Projects */
+#mainMyProjects{
+    transform-origin: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+#mainMyProjects:hover{
+    border-bottom: 5px solid white;
+}
+
+/* Bar */
+.bar{
+    width: 0.2%;
+    background-color: white;
+    margin-right: 10%;
+    margin-left: 10%;
+    top: 35%;
+}
+
+/* Container 3 */
+#three{
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#three.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Section Title */
+.sectionTitle{
+    transform-origin: center;
+    font-size: 48px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+/* Sections Content */
+.sectionsContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sectionsContent a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+/* Main Videogames */
+#mainVideogames{
+    transform-origin: center;
+    max-width: max-content;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+#mainVideogames:hover{
+    border-bottom: 5px solid white;
+}
+
+
+/* Backgrounds */
+video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    left: 0;
+    top: -9%;
+}
+#videogamesVideo{
+    display: none;
+}
+#digitalDesignVideo{
+    display: none;
+    filter: grayscale();
+}
+#modelsVideo{
+    display: none;
+    filter: sepia();
+}
+
+/* Main Digital Design */
+#mainDigitalDesign{
+    transform-origin: center;
+    max-width: max-content;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+#mainDigitalDesign:hover{
+    border-bottom: 5px solid white;
+}
+
+
+/* Main 3D Models */
+#main3DModels{
+    transform-origin: center;
+    max-width: max-content;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+#main3DModels:hover{
+    border-bottom: 5px solid white;
+}
+
+                                    /* ====TABLET==== */
+
+@media (min-width: 768px) and (max-width: 991px){
+
+}

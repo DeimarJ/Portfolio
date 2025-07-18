@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutDesign.css">
+    <title>SOBRE MI COMO DISEÑADOR</title>
+</head>
+
+<body>
+
+    <div class="backgrounds">
+        <video autoplay loop muted id="videogamesVideo">
+            <source src="Backgrounds/Prueba.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header #="header">
+        <label for="btn-sections">SECCIONES</label>
+        <a href="mainAboutMe.html">SOBRE MÍ</a>
+        <label for="btn-contact">CONTACTO</label>
+    </header>
+    <input type="checkbox" name="" id="btn-sections">
+
+    <div class="menuContainer">
+        <label for="btn-sections" class="labelContainer">
+            <div class="touch"></div>
+        </label>
+        <div class="menu">
+            <h2>ELIGE UNA SECCIÓN</h2>
+            <nav>
+                <a href="videoGames.html">VIDEOJUEGOS</a>
+                <a href="digitalDesign.html">DISEÑO DÍGITAL</a>
+                <a href="models3d.html">MODELOS 3D</a>
+            </nav>
+
+
+            <label for="btn-contact">CONTACTO</label>
+        </div>
+    </div>
+
+    <input type="checkbox" name="" id="btn-contact">
+    <div class="contactContainer">
+        <div class="contact">
+            <h1>CONTÁCTAME POR UN DISEÑO</h1>
+
+            <div class="dataContainer">
+                <div class="nameContainer">
+                    <input type="text" placeholder="NOMBRE" class="name">
+                    <input type="text" placeholder="APELLIDO" class="lastname">
+                </div>
+
+                <div class="emailContainer">
+                    <input type="email" placeholder="example@e-mail.com" class="email">
+                </div>
+
+                <div class="descriptionContainer">
+                    <input type="text" placeholder="DESCRIPCIÓN" class="description">
+                </div>
+
+                <div class="buttonsContainer">
+                    <label for="btn-contact" class="cancel">Cancelar</label>
+                    <label for="btn-contact" class="send">Enviar</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="infoContainer">
+        <div class="profileContainer" data-aos="fade-right">
+            <img src="profilePhoto/photoCut.png" alt="" width="40%" height="50%">
+            <div class="title">
+                <h1>¿QUIÉN ES TheDeiJ?</h1>
+            </div>
+        </div>
+
+        
+
+        <div class="infoDescription" data-aos="fade-left">
+            <h1>SOBRE MÍ COMO DISEÑADOR DÍGITAL</h1>
+            TheDeiJ es un diseñador digital junior con una pasión por la creatividad y la innovación. Poseo experiencia
+            en herramientas como Adobe Creative Suite y me adapto de manera rápida, a la creación de diseños visuales
+            funcionales. <br><br>
+
+            Mi aventura en el mundo del diseño digital solo está comenzando, mi meta es mejorar a través de la experiencia 
+            y la práctica. Me destaco por mi capacidad para adaptarme rápidamente a nuevas tendencias y tecnologías, lo que me 
+            permite tener más efectividad en el alcance de mi objetivo. <br><br>
+            
+            Mi atención al detalle y mi compromiso con la calidad asegurarán que alcance mi meta. <br>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+});
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

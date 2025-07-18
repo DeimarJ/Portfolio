@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto con Línea al Pasar el Cursor y Cambio de Contenedor</title>
+    <style>
+        .underline-on-hover {
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .underline-on-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in-out;
+        }
+        .underline-on-hover:hover::after {
+            transform: scaleX(1);
+        }
+        .container {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container1">
+        <p class="underline-on-hover" id="clickableText">Pasa el cursor sobre este texto y haz clic</p>
+    </div>
+    <div class="container hidden" id="container2">
+        <h2>Nuevo Contenedor</h2>
+        <p>Este es el nuevo contenido que aparece al hacer clic.</p>
+    </div>
+
+    <script>
+        const clickableText = document.getElementById('clickableText');
+        const container1 = document.getElementById('container1');
+        const container2 = document.getElementById('container2');
+
+        clickableText.addEventListener('click', () => {
+            container1.classList.add('hidden');
+            setTimeout(() => {
+                container1.style.display = 'none';
+                container2.classList.remove('hidden');
+            }, 500); // Espera a que la transición de opacidad termine
+        });
+    </script>
+</body>
+</html>
