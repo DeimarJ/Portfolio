@@ -5,8 +5,8 @@
 
 video{
   position: absolute;
-    width: 100%;
-    height: 110%;
+    width: 110%;
+    height: 130%;
     left: 0%;
     top: 0%;
     z-index: -1;
@@ -337,8 +337,8 @@ header{
 
 .announce{
   position: absolute;
-  left: 17.5%;
-  top: 50%;
+  left: 10.5%;
+  top: 40%;
 }
 
   
