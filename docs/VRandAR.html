@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="models3d.css">
+    <link rel="stylesheet" href="VRandAR.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
 </head>
 <body>
@@ -63,9 +64,51 @@
             </div>
         </div>
     </div>
-    <div class="announce">
-        <H1>EN ESTE MOMENTO ESTA SECCIÓN ESTÁ SIENDO ACTUALIZADA. TENEMOS PREVISTO PARA EL 22/07/25 A LAS 18:00 GTM-05 ESTAR DISPONIBLE NUEVAMENTE.</H1>
+
+    <div class="mainContent">
+        <div class="projectContainer" data-aos="fade-up">
+            <div class="projectText" data-aos="fade-right">
+                <h1>SUPER SONIC BROS</h1>
+                <p> Super Sonic Bros es un proyecto en Realidad Aumentada que pretende generar el mundo de Super Mario Bros con el personaje de Sonic siguiendo una serie de marcadores.</p>
+                <button class="infoButton" data-aos="zoom-in" data-aos-delay="200">Más información</button>
+            </div>
+            <video controls data-aos="fade-left" data-aos-delay="400">
+                <source src="vids/Super Sonic Bros AR.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="projectContainer" data-aos="fade-up">
+            <video controls data-aos="fade-left" data-aos-delay="400">
+                <source src="vids/Travelers.mp4" type="video/mp4">
+            </video>
+            <div class="projectText" data-aos="fade-right">
+                <h1>TRAVELERS</h1>
+                <p> Travelers es un proyecto de Realidad Virtual que lleva a nuestro jugador a un recorrido mundo de fantasía donde la aventura solo comuienza.</p>
+                <button class="infoButton" data-aos="zoom-in" data-aos-delay="200">Más información</button>
+            </div>
+        </div>
+        <div class="projectContainer" data-aos="fade-up">
+            <div class="projectText" data-aos="fade-right">
+                <h1>SPATIAL</h1>
+                <p> Spatial es un proyecto de Realidad Virtual que lleva a nuestro jugador a un mundo donde se le muestra un tutorial de como programar el movimiento de un personaje en Unity.</p>
+                <button class="infoButton" data-aos="zoom-in" data-aos-delay="200">Más información</button>
+            </div>
+            <video controls data-aos="fade-left" data-aos-delay="400">
+                <source src="vids/Spatial.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
     
+
+    
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        duration: 800,
+        once: true,
+        offset: 120,
+        });
+    </script>
+
 </body>
 </html>
