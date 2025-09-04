@@ -2,67 +2,221 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="mainAboutMe.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutMe.css">
+    <title>SOBRE MI COMO DISEÑADOR</title>
 </head>
 
 <body>
 
-  <div class="backgrounds">
-    <video autoplay loop muted id="videogamesVideo">
-      <source src="Backgrounds/Prueba.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div class="swiper mySwiper">
-
-    <div data-aos="fade-down" class="title">
-      <h1>ELIGE QUE QUIERES SABER SOBRE MI</h1>
+    <div class="backgrounds">
+        <video autoplay loop muted id="videogamesVideo">
+            <source src="Backgrounds/Prueba.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <div class="swiper-wrapper">
+    <header #="header">
+        <label for="btn-sections">SECCIONES</label>
+        <a href="mainAboutMe.html">SOBRE MÍ</a>
+        <label for="btn-contact">CONTACTO</label>
+    </header>
+    <input type="checkbox" name="" id="btn-sections">
 
-        <div class="swiper-slide">
-          <div class="swiper-back" data-aos="fade-up">
-            <img src="mainAboutMeImg/developer.webp" alt="" width="100%" height="100%">
-          </div>
-          <div class="icons">
-            <i class="fa-solid fa-circle-arrow-left"></i>
-          </div>
-            <div class="product-txt" data-aos="fade-up">
-              <span>TheDeiJ COMO DESARROLLADOR</span>
-            </div>
-          <a href="aboutDeveloper.html" class="btn-1">Detalles</a>
+    <div class="menuContainer">
+        <label for="btn-sections" class="labelContainer">
+            <div class="touch"></div>
+        </label>
+        <div class="menu">
+            <h2>ELIGE UNA SECCIÓN</h2>
+            <nav>
+                <a href="videoGames.html">VIDEOJUEGOS</a>
+                <a href="digitalDesign.html">DISEÑO DÍGITAL</a>
+                <a href="models3d.html">MODELOS 3D</a>
+            </nav>
+
+
+            <label for="btn-contact">CONTACTO</label>
         </div>
-
-        <div class="swiper-slide">
-          <div class="swiper-back" data-aos="fade-up">
-            <img src="mainAboutMeImg/digitalDesigner.webp" alt="" width="100%" height="100%">
-          </div>
-          <div class="icons">
-            <i class="fa-solid fa-circle-arrow-left"></i>
-          </div>
-            <div class="product-txt" data-aos="fade-up">
-              <span>TheDeiJ COMO DISEÑADOR DÍGITAL</span>
-            </div>
-          <a href="aboutDesign.html" class="btn-1">Detalles</a>
-        </div>
-
     </div>
-  </div>
+
+    <input type="checkbox" name="" id="btn-contact">
+    <div class="contactContainer">
+        <div class="contact">
+            <h1>CONTÁCTAME POR UN DISEÑO</h1>
+
+            <div class="dataContainer">
+                <div class="nameContainer">
+                    <input type="text" placeholder="NOMBRE" class="name">
+                    <input type="text" placeholder="APELLIDO" class="lastname">
+                </div>
+
+                <div class="emailContainer">
+                    <input type="email" placeholder="example@e-mail.com" class="email">
+                </div>
+
+                <div class="descriptionContainer">
+                    <input type="text" placeholder="DESCRIPCIÓN" class="description">
+                </div>
+
+                <div class="buttonsContainer">
+                    <label for="btn-contact" class="cancel">Cancelar</label>
+                    <label for="btn-contact" class="send">Enviar</label>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="mainAboutme.js"></script>
+    <div class="infoContainer">
+        <!-- Sección izquierda fija con la foto -->
+        <div class="leftSection" data-aos="fade-right">
+            <div class="profileContainer">
+                <img src="profilePhoto/photoCut.png" alt="Foto de perfil de Deimar Mena">
+            </div>
+            
+            <!-- Recuadros que aparecen con scroll por tramos -->
+            <div class="skillsCard" id="skillsCard1">
+                <div class="skillsContent">
+                    <h3>CV DEIMAR</h3>
+                    <button class="moreInfoBtn" onclick="showCV()">Descargar CV</button>
+                </div>
+            </div>
 
-  <script>
-    AOS.init();
-  </script>
+            <div class="skillsCard" id="skillsCard2">
+                <div class="skillsContent">
+                    <h3>DESARROLLADOR DE VIDEOJUEGOS</h3>
+                    <button class="moreInfoBtn" onclick="showGameDev()">Más información</button>
+                </div>
+            </div>
+
+            <div class="skillsCard" id="skillsCard3">
+                <div class="skillsContent">
+                    <h3>DISEÑADOR DIGITAL</h3>
+                    <button class="moreInfoBtn" onclick="showDesign()">Más información</button>
+                </div>
+            </div>
+
+            <div class="skillsCard" id="skillsCard4">
+                <div class="skillsContent">
+                    <h3>ESPECIALISTA EN VR/AR</h3>
+                    <button class="moreInfoBtn" onclick="showVRAR()">Más información</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección derecha scrolleable con título y texto -->
+        <div class="rightSection" data-aos="fade-left">
+            <div class="titleContainer">
+                <h1>¿QUIÉN ES DEIMAR MENA?</h1>
+            </div>
+
+            <div class="infoDescription">
+                <h1>SOBRE MÍ</h1>
+                Soy Deimar Mena, Ingeniero Multimedia y desarrollador de videojuegos
+                y aplicaciones con una sólida base en motores como Unity y Unreal Engine. 
+                Tengo una gran pasión por la creación de experiencias interactivas e 
+                inmersivas, donde combino el diseño digital con la programación para 
+                transformar ideas en proyectos reales. <br><br>
+
+                En Unity, he desarrollado juegos y aplicaciones con jugabilidad fluida, 
+                integrando mecánicas mediante C# y optimizando el rendimiento. En Unreal 
+                Engine, he explorado tanto Blueprints como C++, creando entornos dinámicos 
+                y realistas. Mi experiencia abarca también tecnologías de Realidad 
+                Aumentada, Mixta y Virtual, ampliando las posibilidades de interacción. <br><br>
+
+                Además, cuento con formación y práctica en diseño digital, utilizando
+                herramientas como Adobe Creative Suite para generar piezas visuales 
+                funcionales y atractivas. Mi atención al detalle, capacidad de adaptación 
+                y constante deseo de aprender me permiten mantenerme actualizado frente a 
+                nuevas tendencias y tecnologías. <br><br>
+
+                Me destaco por ser una persona responsable, creativa y versátil, con 
+                habilidades para trabajar en equipo e individualmente. También poseo 
+                conocimientos en programación (C#, Python, Java), desarrollo web 
+                (HTML, CSS, JavaScript), modelado y animación 3D, ilustración digital y 
+                producción audiovisual. <br><br>
+
+                Actualmente, mi objetivo es seguir creciendo como profesional, integrando 
+                diseño, desarrollo y creatividad en cada proyecto, y aportando soluciones 
+                innovadoras en el mundo digital. <br><br>
+
+                Mi aventura en el mundo del diseño digital solo está comenzando, mi meta es mejorar a través de la experiencia 
+                y la práctica. Me destaco por mi capacidad para adaptarme rápidamente a nuevas tendencias y tecnologías, lo que me 
+                permite tener más efectividad en el alcance de mi objetivo. <br><br>
+                
+                Mi atención al detalle y mi compromiso con la calidad asegurarán que 
+                alcance mi meta. <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </script>
+
+    <script>
+        AOS.init();
+        
+        // Obtener elementos de los recuadros y la sección de scroll
+        const skillsCard1 = document.getElementById('skillsCard1');
+        const skillsCard2 = document.getElementById('skillsCard2');
+        const skillsCard3 = document.getElementById('skillsCard3');
+        const skillsCard4 = document.getElementById('skillsCard4');
+        const rightSection = document.querySelector('.rightSection');
+        
+        rightSection.addEventListener('scroll', function() {
+            const scrollTop = rightSection.scrollTop;
+            const scrollHeight = rightSection.scrollHeight;
+            const clientHeight = rightSection.clientHeight;
+            
+            // Calcular el porcentaje de scroll
+            const scrollPercentage = scrollTop / (scrollHeight - clientHeight);
+            
+            // Ocultar todos los recuadros primero
+            skillsCard1.classList.remove('show');
+            skillsCard2.classList.remove('show');
+            skillsCard3.classList.remove('show');
+            skillsCard4.classList.remove('show');
+            
+            // Mostrar recuadro según el tramo de scroll (4 tramos)
+            if (scrollPercentage >= 0 && scrollPercentage < 0.25) {
+                // Primer tramo (0% - 25%): CV Deimar
+                skillsCard1.classList.add('show');
+            } else if (scrollPercentage >= 0.25 && scrollPercentage < 0.5) {
+                // Segundo tramo (25% - 50%): Desarrollador de Videojuegos
+                skillsCard2.classList.add('show');
+            } else if (scrollPercentage >= 0.5 && scrollPercentage < 0.75) {
+                // Tercer tramo (50% - 75%): Diseñador Digital
+                skillsCard3.classList.add('show');
+            } else if (scrollPercentage >= 0.75) {
+                // Cuarto tramo (75% - 100%): Especialista VR/AR
+                skillsCard4.classList.add('show');
+            }
+        });
+        
+        // Funciones para los botones "Más información"
+        function showCV() {
+            alert('📄 CV de Deimar Mena\n\n¡Descarga mi currículum completo!\n\nIngeniero Multimedia\nDesarrollador de Videojuegos\nDiseñador Digital\nEspecialista en VR/AR');
+        }
+        
+        function showGameDev() {
+            alert('🎮 Desarrollador de Videojuegos\n\nEspecializado en Unity y Unreal Engine\nC# y C++ para mecánicas de juego\nOptimización y rendimiento');
+        }
+        
+        function showDesign() {
+            alert('🎨 Diseñador Digital\n\nAdobe Creative Suite\nIlustración digital\nDiseño de interfaces\nCreación de assets visuales');
+        }
+        
+        function showVRAR() {
+            alert('🥽 Especialista en VR/AR\n\nRealidad Virtual y Aumentada\nExperiencias inmersivas\nTecnologías emergentes\nInteracción espacial');
+        }
+        
+        // Mostrar el primer recuadro al cargar la página
+        window.addEventListener('load', function() {
+            skillsCard1.classList.add('show');
+        });
+    </script>
 </body>
 
 </html>
