@@ -89,8 +89,8 @@ function stopAutoChange() {
     }
 }
 
-// Manejar scroll para cambio de página
-function handleScroll() {
+// Manejar wheel para cambio de página (reemplaza handleScroll)
+function handleWheel(event) {
     const currentTime = Date.now();
     
     // Resetear acumulación si ha pasado mucho tiempo
@@ -98,15 +98,18 @@ function handleScroll() {
         scrollAccumulated = 0;
     }
     
-    scrollAccumulated += Math.abs(window.scrollY - (window.lastScrollY || 0));
-    window.lastScrollY = window.scrollY;
+    // Acumular movimiento de la rueda del mouse
+    scrollAccumulated += Math.abs(event.deltaY);
     lastScrollTime = currentTime;
     
-    // Cambiar página si se ha scrolleado suficiente
+    // Cambiar página si se ha movido la rueda suficiente
     if (scrollAccumulated >= SCROLL_THRESHOLD) {
         navigateToNextPage();
         scrollAccumulated = 0;
     }
+    
+    // Prevenir scroll real para mantener la estética
+    event.preventDefault();
 }
 
 // Pausar auto-cambio cuando mouse está sobre el contenido
@@ -141,9 +144,8 @@ function initGameNavigation() {
     startAutoChange();
     setupMouseEvents();
     
-    // Event listener para scroll
-    window.addEventListener('scroll', handleScroll);
-    window.lastScrollY = window.scrollY;
+    // Event listener para wheel (reemplaza scroll)
+    window.addEventListener('wheel', handleWheel, { passive: false });
     
     // Limpiar al salir de la página
     window.addEventListener('beforeunload', stopAutoChange);
