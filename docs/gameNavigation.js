@@ -9,7 +9,7 @@ const pages = [
     'origins.html',
     'n-rgeia.html', 
     'mystic.html',
-    'videoGames copy 3.html'
+    'timeRunners.html'
 ];
 
 // Configuración - PERSONALIZAR AQUÍ
