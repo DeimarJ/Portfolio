@@ -17,10 +17,11 @@ video{
 
 html, body {
   font-family: "Orbitron";
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin: 0 auto;
   width: 100vw;
-  height: 100vh;
+  min-height: 150vh; /* Asegurar altura mínima para scroll */
   color: white;
 }
 
