@@ -75,6 +75,28 @@ function navigateToNextPage() {
     }, 600);
 }
 
+// Navegar a la página anterior con transición
+function navigateToPreviousPage() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
+    const previousIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+    const previousPage = pages[previousIndex];
+    
+    // Crear overlay de transición
+    const overlay = createTransitionOverlay();
+    
+    // Fade out
+    setTimeout(() => {
+        overlay.style.opacity = '1';
+    }, 50);
+    
+    // Navegar después del fade out
+    setTimeout(() => {
+        window.location.href = previousPage;
+    }, 600);
+}
+
 // Función para el cambio automático
 function startAutoChange() {
     autoChangeInterval = setInterval(() => {
@@ -98,13 +120,19 @@ function handleWheel(event) {
         scrollAccumulated = 0;
     }
     
-    // Acumular movimiento de la rueda del mouse
-    scrollAccumulated += Math.abs(event.deltaY);
+    // Acumular movimiento con dirección (positivo = abajo, negativo = arriba)
+    scrollAccumulated += event.deltaY;
     lastScrollTime = currentTime;
     
-    // Cambiar página si se ha movido la rueda suficiente
+    // Cambiar página hacia adelante (scroll hacia abajo)
     if (scrollAccumulated >= SCROLL_THRESHOLD) {
         navigateToNextPage();
+        scrollAccumulated = 0;
+    }
+
+    // Cambiar página hacia atrás (scroll hacia arriba)
+    if (scrollAccumulated <= -SCROLL_THRESHOLD) {
+        navigateToPreviousPage();
         scrollAccumulated = 0;
     }
     
@@ -170,6 +198,7 @@ document.addEventListener('DOMContentLoaded', initGameNavigation);
 window.gameNavigation = {
     goToPage,
     navigateToNextPage,
+    navigateToPreviousPage,
     startAutoChange,
     stopAutoChange,
     getCurrentPageIndex
