@@ -5,9 +5,10 @@
 
 // Array de páginas en orden cíclico - PERSONALIZAR AQUÍ
 const pages = [
-    'videoGames.html',
-    'videoGames copy.html', 
-    'videoGames copy 2.html',
+    'scape.html',
+    'origins.html',
+    'n-rgeia.html', 
+    'mystic.html',
     'videoGames copy 3.html'
 ];
 
