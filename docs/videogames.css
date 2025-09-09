@@ -299,7 +299,6 @@ header{
 
 .imgTest{
     mix-blend-mode: screen;
-    background-image: url(gameImg/Origins.jpeg);
     background-size: contain;
     height: 100vw;
     width: 100vw;
