@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="models3d.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="videogames.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
             <nav>
                 <a href="scape.html">VIDEOJUEGOS</a>
                 <a href="digitalDesign.html">DISEÑO DÍGITAL</a>
-                <a href="models3d.html">MODELOS 3D</a>
+                <a href="">MODELOS 3D</a>
             </nav>
 
 
@@ -40,7 +41,7 @@
     <input type="checkbox" name="" id="btn-contact">
     <div class="contactContainer">
         <div class="contact">
-            <h1>CONTÁCTAME POR UN MODELO 3D</h1>
+            <h1>CONTÁCTAME POR UN VIDEOJUEGO</h1>
 
             <div class="dataContainer">
                 <div class="nameContainer">
@@ -63,9 +64,43 @@
             </div>
         </div>
     </div>
-    <div class="announce">
-        <H1>ESTA SECCIÓN NO ESTÁ DISPONIBLE, VUELVA PRONTO.</H1>
-    </div>
+
+    <div class="imgTest" style="background-image: url('');">  </div>
+
+
     
+    <div class="container">
+        <div class="effect"></div>
+
+        <div class="letters">
+
+            <div data-aos="fade-left"
+                 data-aos-easing="linear"
+                 data-aos-duration="1500"
+                class="imageDescription">
+                Scape es un videojuego en el que debes buscar la salida de una mansión pasando por varios minijuegos hasta finalmente ser rescatado.   
+            </div>
+            <div data-aos="fade-right"
+                 data-aos-easing="linear"
+                 data-aos-duration="1500"
+                    class="imageTitle">
+                <h2>ORIGINS</h2>
+                <h4>GÉNERO: ACCIÓN, AVENTURA, MUNDO ABIERTO, ACERTIJOS, MINIJUEGOS</h4>
+                <h4>FECHA: EN PROCESO</h4>
+            </div>
+            <div  class="imageContact">
+                <label for="btn-contact">
+                    CONCTACTAR POR UN VIDEOJUEGO
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ARCHIVO EXTERNO PARA NAVEGACIÓN - gameNavigation.js controla todo -->
+    <script src="gameNavigation.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
