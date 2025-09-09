@@ -8,7 +8,6 @@ const pages = [
     'scape.html',
     'origins.html',
     'n-rgeia.html', 
-    'mystic.html',
     'timeRunners.html'
 ];
 
