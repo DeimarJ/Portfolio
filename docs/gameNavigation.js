@@ -8,7 +8,8 @@ const pages = [
     'scape.html',
     'origins.html',
     'n-rgeia.html', 
-    'timeRunners.html'
+    'timeRunners.html',
+    'horrorHouse.html'
 ];
 
 // Configuración - PERSONALIZAR AQUÍ
