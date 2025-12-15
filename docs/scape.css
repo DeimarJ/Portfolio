@@ -1,0 +1,7 @@
+/* Estilos específicos para la página SCAPE */
+/* Aquí puedes sobreescribir o añadir estilos solo para scape.html */
+
+/* Imagen de fondo del juego Scape */
+.imgTest {
+  background-image: url('gameImg/Origins.jpeg');
+}

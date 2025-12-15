@@ -9,7 +9,8 @@ const pages = [
     'origins.html',
     'n-rgeia.html', 
     'timeRunners.html',
-    'horrorHouse.html'
+    'horrorHouse.html',
+    'spaceDestroyer.html'
 ];
 
 // Configuración - PERSONALIZAR AQUÍ
@@ -22,6 +23,7 @@ let autoChangeInterval;
 let scrollAccumulated = 0;
 let lastScrollTime = 0;
 let isTransitioning = false;
+let isVideoPlaying = false; // Nueva variable para controlar cuando hay video reproduciéndose
 
 // Determinar página actual
 function getCurrentPageIndex() {
@@ -101,7 +103,10 @@ function navigateToPreviousPage() {
 // Función para el cambio automático
 function startAutoChange() {
     autoChangeInterval = setInterval(() => {
-        navigateToNextPage();
+        // No cambiar automáticamente si hay un video reproduciéndose
+        if (!isVideoPlaying) {
+            navigateToNextPage();
+        }
     }, AUTO_CHANGE_TIME);
 }
 
@@ -195,6 +200,15 @@ function goToPage(index) {
 // Auto-inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initGameNavigation);
 
+// Funciones para controlar el estado del video
+function setVideoPlaying(playing) {
+    isVideoPlaying = playing;
+}
+
+function isVideoCurrentlyPlaying() {
+    return isVideoPlaying;
+}
+
 // También exportar las funciones principales para uso manual si es necesario
 window.gameNavigation = {
     goToPage,
@@ -202,5 +216,7 @@ window.gameNavigation = {
     navigateToPreviousPage,
     startAutoChange,
     stopAutoChange,
-    getCurrentPageIndex
+    getCurrentPageIndex,
+    setVideoPlaying,
+    isVideoCurrentlyPlaying
 };

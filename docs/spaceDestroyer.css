@@ -1,0 +1,22 @@
+/* Estilos específicos para la página SPACE DESTROYER */
+/* Aquí puedes sobreescribir o añadir estilos solo para spaceDestroyer.html */
+
+/* Imagen de fondo del juego Space Destroyer (cámbiala cuando tengas el arte final) */
+.imgTest {
+  background-image: url('gameImg/N-Rgeia.png');
+}
+
+/* Contenedor del botón para jugar Space Destroyer, centrado en pantalla */
+.play-space-button {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  text-align: center;
+}
+
+.play-space-button a {
+  color: white;
+  text-decoration: none;
+}

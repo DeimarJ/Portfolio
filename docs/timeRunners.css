@@ -1,0 +1,7 @@
+/* Estilos específicos para la página TIME RUNNERS */
+/* Aquí puedes sobreescribir o añadir estilos solo para timeRunners.html */
+
+/* Imagen de fondo del juego Time Runners */
+.imgTest {
+  background-image: url('gameImg/N-Rgeia.png');
+}

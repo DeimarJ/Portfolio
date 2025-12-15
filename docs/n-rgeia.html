@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="videogames.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="n-rgeia.css">
+    <title>N-rgeia</title>
 </head>
 <body>
     <div class="backgrounds">
@@ -65,7 +66,10 @@
         </div>
     </div>
 
-    <div class="imgTest" style="background-image: url('gameImg/N-Rgeia.png');">  </div>
+    <div class="imgTest" id="imageContainer"></div>
+    <video id="nRgeiaVideo" controls>
+        <source src="vids/N-rgeia.mp4" type="video/mp4">
+    </video>
 
 
     
@@ -101,6 +105,46 @@
     <script src="gameNavigation.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        // Script específico para N-rgeia con video
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainer = document.getElementById('imageContainer');
+            const video = document.getElementById('nRgeiaVideo');
+            let hasVideoStarted = false;
+            
+            // Función para cambiar de imagen a video después de 5 segundos
+            function startVideoTransition() {
+                if (hasVideoStarted) return;
+                hasVideoStarted = true;
+                
+                // Marcar que el video está reproduciéndose
+                if (window.gameNavigation && window.gameNavigation.setVideoPlaying) {
+                    window.gameNavigation.setVideoPlaying(true);
+                }
+                
+                // Cambiar la imagen por el video
+                imageContainer.style.display = 'none';
+                video.style.display = 'block';
+                video.play();
+                
+                // Cuando termine el video, navegar a la siguiente página
+                video.addEventListener('ended', function() {
+                    // Marcar que el video terminó
+                    if (window.gameNavigation && window.gameNavigation.setVideoPlaying) {
+                        window.gameNavigation.setVideoPlaying(false);
+                    }
+                    
+                    // Navegar a la siguiente página
+                    if (window.gameNavigation && window.gameNavigation.navigateToNextPage) {
+                        window.gameNavigation.navigateToNextPage();
+                    }
+                });
+            }
+            
+            // Iniciar transición después de 5 segundos
+            setTimeout(startVideoTransition, 5000);
+        });
     </script>
 </body>
 </html>

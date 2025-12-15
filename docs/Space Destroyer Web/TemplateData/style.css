@@ -1,0 +1,68 @@
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
+#unity-canvas { background: #231F20 }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+/* Contenedor para anuncio en el lado izquierdo del juego */
+.left-ad-container {
+  position: fixed;
+  /* Centrado aproximadamente en el espacio entre el borde y el juego */
+  left: calc(10% - 80px); /* 25% del viewport menos la mitad del banner (160px / 2) */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Forzar tamaño del banner izquierdo */
+.left-ad-container iframe {
+  width: 160px !important;
+  height: 600px !important;
+  max-width: 160px;
+  max-height: 600px;
+}
+
+/* Contenedor para anuncio en el lado derecho del juego */
+.right-ad-container {
+  position: fixed;
+  /* Centrado aproximadamente en el espacio entre el borde y el juego */
+  right: calc(10% - 80px); /* 25% del viewport menos la mitad del banner (160px / 2) */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 160px;
+  height: 600px; /* dos banners de 300px uno sobre otro */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Cada slot individual de anuncio derecho */
+.right-ad-slot {
+  width: 160px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Forzar tamaño del banner derecho */
+.right-ad-slot iframe {
+  max-width: 160px !important;
+  max-height: 300px !important;
+  width: 100% !important;
+  height: 100% !important;
+}

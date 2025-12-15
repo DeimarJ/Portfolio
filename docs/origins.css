@@ -1,0 +1,7 @@
+/* Estilos específicos para la página ORIGINS */
+/* Aquí puedes sobreescribir o añadir estilos solo para origins.html */
+
+/* Imagen de fondo del juego Origins */
+.imgTest {
+  background-image: url('gameImg/Origins.jpeg');
+}

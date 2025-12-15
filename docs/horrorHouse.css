@@ -1,0 +1,7 @@
+/* Estilos específicos para la página HORROR HOUSE */
+/* Aquí puedes sobreescribir o añadir estilos solo para horrorHouse.html */
+
+/* Imagen de fondo del juego Horror House */
+.imgTest {
+  background-image: url('gameImg/Origins.jpeg');
+}

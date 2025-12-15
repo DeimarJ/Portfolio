@@ -1,0 +1,12 @@
+/* Estilos específicos para la página N-RGEIA */
+/* Aquí puedes sobreescribir o añadir estilos solo para n-rgeia.html */
+
+/* Imagen inicial del juego N-rgeia */
+#imageContainer {
+  background-image: url('gameImg/N-Rgeia.png');
+}
+
+/* Estado inicial del video (oculto hasta que empieza) */
+#nRgeiaVideo {
+  display: none;
+}
