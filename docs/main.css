@@ -1,5 +1,4 @@
                                     /* ====PC==== */
-
 /* Body */
 .html, body{
     background-color: black;
@@ -71,6 +70,10 @@
 #two.visible {
     display: block;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Main Title */
@@ -84,6 +87,7 @@
 .content{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -148,6 +152,10 @@
 #three.visible {
     display: block;
     opacity: 1;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Section Title */
@@ -254,20 +262,30 @@ video{
     border-bottom: 5px solid white;
 }
 
-                                    /* ====TABLET==== */
-
-@media (min-width: 200px) and (max-width: 767px){
-/* Body */
-.html, body{
-    background-color: black;
-    color: white;
-    width: 99vw;
-    height: 99vh;
-    overflow: hidden;
-    font-family: "Orbitron";
+ /* Backgrounds */
+video{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    object-fit: cover;
 }
 
-/* Container 1 */
+                                    /* ====Phone==== */
+@media (min-width: 200px) and (max-width: 767px){
+    /* Body */
+    .html, body{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Orbitron";
+    }
+
+    /* Container 1 */
 .container{
     display: flex;
     justify-content: center;
@@ -310,7 +328,7 @@ video{
 /* Press */
 .pulse{
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
 }
 
 
@@ -355,7 +373,7 @@ video{
     border-bottom: 5px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
-#mainAboutMe:hover{
+#mainAboutMe:active{
     border-bottom: 5px solid white;
 }
 
@@ -378,7 +396,7 @@ video{
     border-bottom: 5px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
-#mainMyProjects:hover{
+#mainMyProjects:active{
     border-bottom: 5px solid white;
 }
 
@@ -438,7 +456,7 @@ video{
     border-bottom: 5px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
-#mainVideogames:hover{
+#mainVideogames:active{
     border-bottom: 5px solid white;
 }
 
@@ -463,8 +481,9 @@ video{
     display: none;
     filter: sepia();
 }
-#vrVideo{
+#VrandArVideo{
     display: none;
+    filter: grayscale(75%) brightness(150%);
 }
 
 /* Main Digital Design */
@@ -477,7 +496,7 @@ video{
     border-bottom: 5px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
-#mainDigitalDesign:hover{
+#mainDigitalDesign:active{
     border-bottom: 5px solid white;
 }
 
@@ -506,9 +525,8 @@ video{
     border-bottom: 5px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
-#main3DModels:hover{
+#mainVrAndAr:hover{
     border-bottom: 5px solid white;
 }
-
-
 }
+                                        

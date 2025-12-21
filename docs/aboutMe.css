@@ -1,45 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 .backgrounds {
-  position: fixed;     /* Fija el contenedor en pantalla */
+  position: fixed;
+  /* Fija el contenedor en pantalla */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;         /* Lo pone detrás del contenido */
+  z-index: -1;
+  /* Lo pone detrás del contenido */
   overflow: hidden;
 }
 
-video{
+video {
   position: absolute;
-    width: 110%;
-    height: 130%;
-    left: 0%;
-    top: 0%;
-    z-index: -1;
+  width: 110%;
+  height: 130%;
+  left: 0%;
+  top: 0%;
+  z-index: -1;
 }
-#videogamesVideo{
-  object-fit: cover;   /* Ocupa todo sin deformarse */
+
+#videogamesVideo {
+  object-fit: cover;
+  /* Ocupa todo sin deformarse */
   width: 100%;
 
   filter: grayscale();
   opacity: 1;
 }
 
-html, body {
+html,
+body {
   font-family: "Orbitron";
   overflow-x: hidden;
   margin: 0 auto;
   width: 100vw;
   color: white;
-  overflow-y: scroll; /* permite el scroll vertical */
-  scrollbar-width: none; /* oculta en Firefox */
+  overflow-y: scroll;
+  /* permite el scroll vertical */
+  scrollbar-width: none;
+  /* oculta en Firefox */
 }
 
-header{
+header {
   display: flex;
   z-index: 11;
   position: fixed;
@@ -49,8 +57,9 @@ header{
   background-color: black;
   height: 7%;
 }
-header a{
-  margin-left:  7%;
+
+header a {
+  margin-left: 7%;
   margin-right: 7%;
   font-size: 24px;
   font-weight: bold;
@@ -58,35 +67,39 @@ header a{
   color: white;
   text-decoration: none;
 }
-header a:hover{
-  cursor: pointer;    
-  border-bottom: 5px solid white;
-  transition: border-color 0.3s ease-in-out;
-}
-header label{
-  margin-left:  7%;
-  margin-right: 7%;
-  font-size: 24px;
-  font-weight: bold;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
-header label:hover{
-  cursor: pointer;    
+
+header a:hover {
+  cursor: pointer;
   border-bottom: 5px solid white;
   transition: border-color 0.3s ease-in-out;
 }
 
-#btn-sections{
+header label {
+  margin-left: 7%;
+  margin-right: 7%;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+header label:hover {
+  cursor: pointer;
+  border-bottom: 5px solid white;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#btn-sections {
   display: none;
 }
-#btn-sections:checked ~ .menuContainer{
+
+#btn-sections:checked~.menuContainer {
   opacity: 1;
   visibility: visible;
 }
 
-.menuContainer{
+.menuContainer {
   position: absolute;
   background-color: rgb(0, 0, 0, 0.8);
   width: 100%;
@@ -99,13 +112,13 @@ header label:hover{
   z-index: 10;
 }
 
-.touch{
+.touch {
   position: absolute;
   width: 100%;
   height: 100vh;
 }
 
-.menu{
+.menu {
   width: 100%;
   max-width: 25%;
   height: 100vh;
@@ -115,26 +128,28 @@ header label:hover{
   transform: translateX(-100%);
   z-index: 10;
 }
-#btn-sections:checked ~ .menuContainer .menu{
+
+#btn-sections:checked~.menuContainer .menu {
   opacity: 1;
   visibility: visible;
   transform: translateX(0%);
 }
 
-.menuContainer h2{
+.menuContainer h2 {
   position: absolute;
   top: 15%;
   left: 7.5%;
   font-size: 28px;
 }
 
-.menu nav{
+.menu nav {
   position: absolute;
   top: 35%;
   transform: translateY(15%);
   width: 100%;
 }
-.menu nav a{
+
+.menu nav a {
   display: block;
   text-decoration: none;
   padding: 20px;
@@ -144,12 +159,13 @@ header label:hover{
   font-size: 28px;
   width: 100%;
 }
-.menu nav a:hover{
+
+.menu nav a:hover {
   border-left: 5px solid white;
   background-color: #1f1f1f;
 }
 
-.menu label{
+.menu label {
   position: absolute;
   bottom: 10%;
   left: 7.5%;
@@ -158,26 +174,30 @@ header label:hover{
   width: 50%;
   padding-left: 1%;
 }
-.menu label:hover{
+
+.menu label:hover {
   cursor: pointer;
 }
+
 @keyframes flick {
-  50%{
-      background-color: rgb(204, 204, 204);
+  50% {
+    background-color: rgb(204, 204, 204);
   }
 }
 
 
 
 
-#btn-contact{
+#btn-contact {
   display: none
 }
-#btn-contact:checked ~ .contactContainer{
+
+#btn-contact:checked~.contactContainer {
   opacity: 1;
   visibility: visible;
 }
-#btn-contact:checked ~ .contactContainer .contact{
+
+#btn-contact:checked~.contactContainer .contact {
   opacity: 1;
   visibility: visible;
   transform: translateX(0%);
@@ -186,7 +206,7 @@ header label:hover{
 
 
 
-.contactContainer{
+.contactContainer {
   position: absolute;
   width: 100%;
   height: 100vw;
@@ -199,7 +219,7 @@ header label:hover{
   background-color: rgb(0, 0, 0, 0.8);
 }
 
-.contact{
+.contact {
   width: 100%;
   max-width: 40%;
   height: 100vh;
@@ -210,13 +230,14 @@ header label:hover{
   z-index: 10;
   height: 100vh;
 }
-#btn-contact:checked ~ .contactContainer .contact{
+
+#btn-contact:checked~.contactContainer .contact {
   opacity: 1;
   visibility: visible;
   transform: translateX(150%);
 }
 
-.contactContainer h1{
+.contactContainer h1 {
   position: absolute;
   top: 15%;
   margin: 5%;
@@ -224,7 +245,7 @@ header label:hover{
   text-align: center;
 }
 
-.dataContainer{
+.dataContainer {
   position: absolute;
   top: 0%;
   display: flex;
@@ -235,56 +256,61 @@ header label:hover{
   margin-left: 10%;
 }
 
-.nameContainer{
+.nameContainer {
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: space-around;
   margin: 5% 0 5% 0;
 }
-.contact input.name{
-  text-align: center;
-  width: 45%;
-  font-family: "Orbitron";
-}
-.contact input.lastname{
+
+.contact input.name {
   text-align: center;
   width: 45%;
   font-family: "Orbitron";
 }
 
-.emailContainer{
+.contact input.lastname {
+  text-align: center;
+  width: 45%;
+  font-family: "Orbitron";
+}
+
+.emailContainer {
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 5%;
 }
-.email{
+
+.email {
   width: 95%;
   font-family: "Orbitron";
 }
 
-.descriptionContainer{
+.descriptionContainer {
   width: 100%;
   height: 30%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 5%;
 }
-.description{
+
+.description {
   width: 95%;
   font-family: "Orbitron";
 }
 
-.buttonsContainer{
+.buttonsContainer {
   width: 80%;
   height: 5%;
   display: flex;
   margin-bottom: 5%;
   margin-left: 2.5%;
 }
-.cancel{
+
+.cancel {
   width: 30%;
   font-family: "Orbitron";
   margin-right: 5%;
@@ -293,11 +319,13 @@ header label:hover{
   text-align: center;
   border: 1px solid black;
 }
-.cancel:hover{
+
+.cancel:hover {
   cursor: pointer;
   background-color: rgb(193, 192, 192);
 }
-.send{
+
+.send {
   width: 30%;
   font-family: "Orbitron";
   background-color: white;
@@ -305,19 +333,20 @@ header label:hover{
   text-align: center;
   border: 1px solid black;
 }
-.send:hover{
+
+.send:hover {
   cursor: pointer;
   background-color: rgb(193, 192, 192);
 }
 
-.infoContainer{
+.infoContainer {
   display: flex;
   width: 100%;
   height: 100vh;
   padding-top: 7%;
 }
 
-.leftSection{
+.leftSection {
   width: 40%;
   height: 93vh;
   position: fixed;
@@ -330,14 +359,14 @@ header label:hover{
   padding: 2% 2% 0 2%;
 }
 
-.profileContainer{
+.profileContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
 }
 
-.profileContainer img{
+.profileContainer img {
   border-radius: 50%;
   width: 250px !important;
   height: 250px !important;
@@ -347,12 +376,12 @@ header label:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.profileContainer img:hover{
+.profileContainer img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 48px rgba(255, 255, 255, 0.2);
 }
 
-.skillsCard{
+.skillsCard {
   width: 90%;
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -367,7 +396,7 @@ header label:hover{
   bottom: 15%;
 }
 
-.skillsCard.show{
+.skillsCard.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -418,12 +447,12 @@ header label:hover{
   border-bottom-color: #4caf50;
 }
 
-.skillsContent{
+.skillsContent {
   padding: 20px;
   text-align: center;
 }
 
-.skillsContent h3{
+.skillsContent h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 15px 0;
@@ -435,13 +464,13 @@ header label:hover{
   transition: all 0.3s ease;
 }
 
-.skillsContent h3:hover{
+.skillsContent h3:hover {
   color: #00bcd4;
   border-bottom-color: #00bcd4;
   cursor: default;
 }
 
-.moreInfoBtn{
+.moreInfoBtn {
   background: linear-gradient(45deg, #00bcd4, #0097a7);
   color: white;
   border: none;
@@ -458,13 +487,13 @@ header label:hover{
   box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
 }
 
-.moreInfoBtn:hover{
+.moreInfoBtn:hover {
   background: linear-gradient(45deg, #0097a7, #00838f);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
 }
 
-.rightSection{
+.rightSection {
   width: 60%;
   margin-left: 40%;
   height: 100vh;
@@ -474,7 +503,7 @@ header label:hover{
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
-.infoDescription{
+.infoDescription {
   width: 100%;
   text-align: justify;
   line-height: 1.7;
@@ -500,16 +529,653 @@ header label:hover{
   background: rgba(255, 255, 255, 0.5);
 }
 
-.titleContainer h1{
+.titleContainer h1 {
   font-size: 42px;
   margin: 0 0 3% 0;
   text-align: left;
   color: white;
 }
 
-.infoDescription h1{
+.infoDescription h1 {
   text-align: left;
   font-size: 32px;
   margin-bottom: 4%;
   color: white;
 }
+
+                                              /* ====TABLET==== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  html {
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+  }
+
+  body {
+    overflow-x: hidden !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .backgrounds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  #videogamesVideo {
+    display: block;
+  }
+
+  header {
+    height: 60px;
+    padding: 0 20px;
+    width: 100%;
+    z-index: 1000;
+    /* MUY ALTO para estar siempre arriba */
+    box-sizing: border-box;
+    position: fixed;
+    /* Asegurarse que esté fijo */
+  }
+
+  header a,
+  header label {
+    font-size: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  header a:active,
+  header label:active {
+    border-bottom: 3px solid white;
+  }
+
+  /* MENU LATERAL */
+  .menuContainer {
+    z-index: 500;
+    /* Más alto que todo excepto header */
+    height: 100%;
+  }
+
+  .menu {
+    max-width: 40%;
+    z-index: 500;
+  }
+
+  .menuContainer h2 {
+    font-size: 27px;
+    top: 12%;
+  }
+
+  .menu nav {
+    top: 30%;
+  }
+
+  .menu nav a {
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .menu nav a:active {
+    border-left: 5px solid white;
+    background-color: #1f1f1f;
+  }
+
+  .menu label {
+    font-size: 20px;
+    bottom: 8%;
+  }
+
+  /* CONTACTO */
+  .contactContainer {
+    z-index: 500;
+    /* Mismo nivel que menu */
+    height: 100%;
+  }
+
+  .contact {
+    max-width: 70%;
+    z-index: 500;
+  }
+
+  #btn-contact:checked~.contactContainer .contact {
+    transform: translateX(20%);
+  }
+
+  .contactContainer h1 {
+    font-size: 24px;
+    top: 12%;
+  }
+
+  .dataContainer {
+    margin-top: 35%;
+    width: auto;
+  }
+
+  .contact input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .cancel,
+  .send {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  .cancel:active,
+  .send:active {
+    background-color: rgb(193, 192, 192);
+  }
+
+  /* Contenedor principal ajustado */
+  .infoContainer {
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    position: relative;
+    z-index: 1;
+    /* BAJO */
+  }
+
+  /* leftSection ocupa TODO el viewport y es FIJO */
+  .leftSection {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 10;
+    /* Por encima del contenido */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  /* Foto de perfil arriba */
+  .profileContainer {
+    margin: 0;
+    padding: 20px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .profileContainer img {
+    width: 200px !important;
+    height: 200px !important;
+    border: 3px solid white;
+  }
+
+  .profileContainer img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Tarjetas de habilidades ABAJO */
+  .skillsCard {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 600px !important;
+    padding: 0;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 15;
+  }
+
+  .skillsCard.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #skillsCard1.show {
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  }
+
+  #skillsCard2.show {
+    border-color: #ff4081;
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.4);
+  }
+
+  #skillsCard3.show {
+    border-color: #00bcd4;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+  }
+
+  #skillsCard4.show {
+    border-color: #4caf50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+  }
+
+  .skillsContent {
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  .skillsContent h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    word-wrap: break-word;
+  }
+
+  .moreInfoBtn {
+    padding: 10px 25px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .moreInfoBtn:active {
+    background: linear-gradient(45deg, #0097a7, #00838f);
+    transform: translateY(0);
+  }
+
+  /* Contenido scrolleable en el medio */
+  .rightSection {
+    position: fixed;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 450px);
+    margin: 0;
+    padding: 20px 30px;
+    z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .titleContainer {
+    width: 100%;
+  }
+
+  .titleContainer h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .infoDescription {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .infoDescription h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+
+  .rightSection::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .rightSection::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+  }
+}
+
+                                              /* ====PHONE==== */
+                                              @media (min-width: 200px) and (max-width: 767px){
+                                                * {
+                                                  box-sizing: border-box;
+                                                  max-width: 100%;
+                                                }
+                                              
+                                                html {
+                                                  overflow-x: hidden !important;
+                                                  width: 100%;
+                                                  position: relative;
+                                                }
+                                              
+                                                body {
+                                                  overflow-x: hidden !important;
+                                                  width: 100%;
+                                                  margin: 0;
+                                                  padding: 0;
+                                                  position: relative;
+                                                }
+                                              
+                                                .backgrounds {
+                                                  position: fixed;
+                                                  top: 0;
+                                                  left: 0;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  overflow: hidden;
+                                                  z-index: -1;
+                                                }
+                                              
+                                                video {
+                                                  position: absolute;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: cover;
+                                                  top: 0;
+                                                  left: 0;
+                                                }
+                                              
+                                                #videogamesVideo {
+                                                  display: block;
+                                                }
+                                              
+                                                header {
+                                                  height: 60px;
+                                                  padding: 0 20px;
+                                                  width: 100%;
+                                                  z-index: 1000;
+                                                  /* MUY ALTO para estar siempre arriba */
+                                                  box-sizing: border-box;
+                                                  position: fixed;
+                                                  /* Asegurarse que esté fijo */
+                                                }
+                                              
+                                                header a,
+                                                header label {
+                                                  font-size: 10px;
+                                                  margin-left: 5%;
+                                                  margin-right: 5%;
+                                                }
+                                              
+                                                header a:active,
+                                                header label:active {
+                                                  border-bottom: 3px solid white;
+                                                }
+                                              
+                                                /* MENU LATERAL */
+                                                .menuContainer {
+                                                  z-index: 500;
+                                                  /* Más alto que todo excepto header */
+                                                  height: 100%;
+                                                }
+                                              
+                                                .menu {
+                                                  max-width: 60%;
+                                                  z-index: 500;
+                                                }
+                                              
+                                                .menuContainer h2 {
+                                                  font-size: 20px;
+                                                  top: 12%;
+                                                }
+                                              
+                                                .menu nav {
+                                                  top: 30%;
+                                                }
+                                              
+                                                .menu nav a {
+                                                  font-size: 20px;
+                                                  padding: 15px;
+                                                }
+                                              
+                                                .menu nav a:active {
+                                                  border-left: 5px solid white;
+                                                  background-color: #1f1f1f;
+                                                }
+                                              
+                                                .menu label {
+                                                  font-size: 20px;
+                                                  bottom: 8%;
+                                                }
+                                              
+                                                /* CONTACTO */
+                                                .contactContainer {
+                                                  z-index: 500;
+                                                  /* Mismo nivel que menu */
+                                                  height: 100%;
+                                                }
+                                              
+                                                .contact {
+                                                  max-width: 70%;
+                                                  z-index: 500;
+                                                }
+                                              
+                                                #btn-contact:checked~.contactContainer .contact {
+                                                  transform: translateX(20%);
+                                                }
+                                              
+                                                .contactContainer h1 {
+                                                  font-size: 20px;
+                                                  top: 12%;
+                                                }
+                                              
+                                                .dataContainer {
+                                                  margin-top: 65%;
+                                                  width: auto;
+                                                  margin-left: 0%;
+                                                }
+                                              
+                                                .contact input {
+                                                  padding: 12px;
+                                                  font-size: 12px;
+                                                }
+                                              
+                                                .cancel,
+                                                .send {
+                                                  padding: 12px 0;
+                                                  font-size: 12px;
+                                                }
+                                              
+                                                .cancel:active,
+                                                .send:active {
+                                                  background-color: rgb(193, 192, 192);
+                                                }
+                                              
+                                                /* Contenedor principal ajustado */
+                                                .infoContainer {
+                                                  display: block;
+                                                  padding-top: 20px;
+                                                  width: 100%;
+                                                  min-height: 100vh;
+                                                  overflow-x: hidden !important;
+                                                  position: relative;
+                                                  z-index: 1;
+                                                  /* BAJO */
+                                                }
+                                              
+                                                /* leftSection ocupa TODO el viewport y es FIJO */
+                                                .leftSection {
+                                                  position: fixed;
+                                                  top: 60px;
+                                                  left: 0;
+                                                  width: 100%;
+                                                  height: calc(100vh - 60px);
+                                                  z-index: 10;
+                                                  /* Por encima del contenido */
+                                                  padding: 0;
+                                                  display: flex;
+                                                  flex-direction: column;
+                                                  justify-content: space-between;
+                                                  align-items: center;
+                                                  overflow: hidden;
+                                                  pointer-events: none;
+                                                }
+                                              
+                                                /* Foto de perfil arriba */
+                                                .profileContainer {
+                                                  margin: 0;
+                                                  padding: 20px 0 30px 0;
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  flex-shrink: 0;
+                                                  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0) 100%);
+                                                  width: 100%;
+                                                  pointer-events: auto;
+                                                }
+                                              
+                                                .profileContainer img {
+                                                  width: 160px !important;
+                                                  height: 160px !important;
+                                                  border: 3px solid white;
+                                                }
+                                              
+                                                .profileContainer img:hover {
+                                                  transform: scale(1.03);
+                                                }
+                                              
+                                                /* Tarjetas de habilidades ABAJO */
+                                                .skillsCard {
+                                                  position: fixed;
+                                                  bottom: 20px;
+                                                  left: 0;
+                                                  right: 0;
+                                                  margin: 0 auto;
+                                                  width: 85%;
+                                                  max-width: 600px !important;
+                                                  padding: 0;
+                                                  border: 3px solid rgba(255, 255, 255, 0.3);
+                                                  border-radius: 12px;
+                                                  background: rgba(0, 0, 0, 0.95);
+                                                  backdrop-filter: blur(10px);
+                                                  opacity: 0;
+                                                  visibility: hidden;
+                                                  pointer-events: auto;
+                                                  box-sizing: border-box;
+                                                  z-index: 15;
+                                                }
+                                              
+                                                .skillsCard.show {
+                                                  opacity: 1;
+                                                  visibility: visible;
+                                                }
+                                              
+                                                #skillsCard1.show {
+                                                  border-color: #ffd700;
+                                                  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+                                                }
+                                              
+                                                #skillsCard2.show {
+                                                  border-color: #ff4081;
+                                                  box-shadow: 0 0 20px rgba(255, 64, 129, 0.4);
+                                                }
+                                              
+                                                #skillsCard3.show {
+                                                  border-color: #00bcd4;
+                                                  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+                                                }
+                                              
+                                                #skillsCard4.show {
+                                                  border-color: #4caf50;
+                                                  box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+                                                }
+                                              
+                                                .skillsContent {
+                                                  padding: 15px 20px;
+                                                  box-sizing: border-box;
+                                                }
+                                              
+                                                .skillsContent h3 {
+                                                  font-size: 16px;
+                                                  margin: 10px 0;
+                                                  word-wrap: break-word;
+                                                }
+                                              
+                                                .moreInfoBtn {
+                                                  padding: 10px 25px;
+                                                  font-size: 13px;
+                                                  margin-top: 10px;
+                                                }
+                                              
+                                                .moreInfoBtn:active {
+                                                  background: linear-gradient(45deg, #0097a7, #00838f);
+                                                  transform: translateY(0);
+                                                }
+                                              
+                                                /* Contenido scrolleable en el medio */
+                                                .rightSection {
+                                                  position: fixed;
+                                                  top: 270px;
+                                                  left: 0;
+                                                  width: 100%;
+                                                  height: calc(100vh - 450px);
+                                                  margin: 0;
+                                                  padding: 20px 30px;
+                                                  z-index: 5;
+                                                  overflow-y: auto;
+                                                  overflow-x: hidden;
+                                                  box-sizing: border-box;
+                                                }
+                                              
+                                                .titleContainer {
+                                                  width: 100%;
+                                                }
+                                              
+                                                .titleContainer h1 {
+                                                  font-size: 20px;
+                                                  text-align: center;
+                                                  margin-bottom: 20px;
+                                                  word-wrap: break-word;
+                                                  overflow-wrap: break-word;
+                                                }
+                                              
+                                                .infoDescription {
+                                                  font-size: 14px;
+                                                  line-height: 1.8;
+                                                  text-align: justify;
+                                                  width: 100%;
+                                                  word-wrap: break-word;
+                                                  overflow-wrap: break-word;
+                                                }
+                                              
+                                                .infoDescription h1 {
+                                                  font-size: 24px;
+                                                  text-align: center;
+                                                  margin-bottom: 20px;
+                                                  word-wrap: break-word;
+                                                }
+                                              
+                                                .rightSection::-webkit-scrollbar {
+                                                  width: 6px;
+                                                }
+                                              
+                                                .rightSection::-webkit-scrollbar-thumb {
+                                                  background: rgba(255, 255, 255, 0.4);
+                                                  border-radius: 3px;
+                                                }
+                                              }

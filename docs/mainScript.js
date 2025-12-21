@@ -12,15 +12,14 @@ const modelsVideo = document.getElementById('modelsVideo');
 const mainVrAndAr = document.getElementById('mainVrAndAr');
 const VrandArVideo = document.getElementById('VrandArVideo');
 
+// Control del botón de mantener pulsado
 let holdTimeout;
-let startTime;
-let elapsedTime = 0;
-
 
 function startHold() {
+    // Empieza la animación del círculo
     holdButton.classList.add('holding');
-    startTime = new Date().getTime() - elapsedTime;
 
+    // Si se mantiene pulsado 3 segundos seguidos, cambiamos de pantalla
     holdTimeout = setTimeout(() => {
         twoContainer.classList.add('visible');
         oneContainer.style.opacity = 0;
@@ -28,15 +27,13 @@ function startHold() {
         setTimeout(() => {
             holdButton.style.display = 'none';
         }, 1000);
-    }, 3000 - elapsedTime);
+    }, 3000);
 }
 
-
 function cancelHold() {
+    // Suelta el botón: detenemos animación y reiniciamos el temporizador
     holdButton.classList.remove('holding');
     clearTimeout(holdTimeout);
-    elapsedTime = new Date().getTime() - startTime;
-
 }
 
 // Eventos para mouse
